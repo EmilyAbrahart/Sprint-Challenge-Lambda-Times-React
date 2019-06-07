@@ -1,5 +1,29 @@
 import React from 'react';
-import pt from 'prop-types'
+import pt from 'prop-types';
+import styled from 'styled-components';
+import { FlexFunc } from './../ReusableStyles';
+
+const TabDiv = styled.div`
+	${FlexFunc('row', 'none', 'center')};
+	color: #fff;
+	background-color: #333;
+	margin: 0 5px;
+	padding: 2px 10px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	cursor: pointer;
+	font-weight: bold;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	.active-tab {
+		background-color: #fff;
+		color: #333;
+		border: 2px solid #333;
+	}
+`;
 
 const Tab = props => {
 	/* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -10,7 +34,7 @@ const Tab = props => {
 	};
 
 	return (
-		<div
+		<TabDiv
 			className={`tab ${isActiveTab}`}
 			onClick={() => {
 				/* Replace this dummy click handler function with your selectTabHandler function from props 
@@ -19,7 +43,7 @@ const Tab = props => {
 			}}
 		>
 			{props.tab.toUpperCase()}
-		</div>
+		</TabDiv>
 	);
 };
 
