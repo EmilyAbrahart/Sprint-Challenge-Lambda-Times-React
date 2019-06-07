@@ -18,7 +18,7 @@ const TabDiv = styled.div`
 		text-decoration: underline;
 	}
 
-	.active-tab {
+	&.active-tab {
 		background-color: #fff;
 		color: #333;
 		border: 2px solid #333;
