@@ -12,6 +12,7 @@ const TopBarDiv = styled.div`
 	height: 44px;
 	background-color: #333;
 `;
+
 const TopBarContainer = styled.div`
 	${FlexFunc('row', 'none', 'none')};
 	width: 100%;
@@ -23,6 +24,7 @@ const TopBarContainer = styled.div`
 		width: 1280px;
 	}
 `;
+
 const TopBarContainerLeft = styled.div`
 	${FlexFunc('row', 'none', 'center')};
 	flex: 1;
